@@ -6,7 +6,7 @@ import CountryItem from "../components/CountryItem.vue";
 
 const countries = ref<{ name: string; emoji: string }[]>([]);
 const countryNameQuery = ref<string>("");
-const { text, copy, copied, isSupported } = useClipboard();
+const { text, copy } = useClipboard();
 
 async function getAllCountries() {
   countries.value = await getCountries();
